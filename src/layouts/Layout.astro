@@ -1,6 +1,7 @@
 ---
 import "../assets/app.css";
-import NavBar from "../components/NavBar.astro";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
 export let pageTitle = "";
 ---
 
@@ -17,14 +18,16 @@ export let pageTitle = "";
 	<body>
 		<div id="container">
 			<!-- header -->
-			<header><NavBar /></header>
+			<Header />
 			<!-- main -->
 			<main>
-				<!-- main content will be slotted in here -->
-				<slot />
+				<div class="container mx-auto">
+					<!-- main content will be slotted in here -->
+					<slot />
+				</div>
 			</main>
 			<!-- footer -->
-			<footer></footer>
+			<Footer />
 		</div>
 	</body>
 </html>

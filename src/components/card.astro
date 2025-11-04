@@ -1,0 +1,16 @@
+---
+// Declare a prop (this works exactly like your `export let title`)
+export interface Props {
+  title: string;
+}
+
+// You can set a default if you like
+const { title = "" } = Astro.props;
+---
+
+<div class="card card-border border-base-300 bg-base-200 min-w-60">
+  <div class="card-body">
+    <h3 class="card-title text-base-300 uppercase pb-2">{title}</h2>
+    <slot />
+  </div>
+</div>

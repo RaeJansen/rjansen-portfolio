@@ -1,24 +1,46 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/card.astro";
 ---
-
 <Layout pageTitle="Home">
-	<Welcome>
-		<div class="hero">
-  <div class="hero-content flex-col lg:flex-row">
+    <div class="hero bg-base-100">
+  <div class="hero-content flex-col md:flex-row">
     <img
-      src="../../public/profile-pic.svg"
-      class="border-2 m-0 p-0" alt="Rae Jansen"
+      src="../../public/headshot.svg"
+      class="border object-fit max-w-100"
     />
     <div>
-      <h1 class="text-5xl font-bold">Rae Jansen</h1>
+      <h1 class="text-5xl font-bold ">Rae Jansen</h1>
       <p class="py-6">
-        UX/UI Designer
+       I'm a UX/UI Designer dedicated to blending intuitive user experience with a sense of digital wonder. My diverse background—from photography and illustration to my love for reading—fuels a highly collaborative approach aimed at delivering truly memorable and effective user experiences. If you're looking for a partner to transform a concept into a truly magical digital reality, I would love to connect and discuss your next project.
       </p>
-      <button class="btn btn-primary">Get Started</button>
+      <button class="btn btn-primary w-full text-lg font-bold">Contact Me</button>
     </div>
   </div>
 </div>
-	</Welcome>
+    <section class="p-4">
+        <h2 class="font-bold text-2xl mb-2">My Toolbelt</h2>
+        <div class="flex flex-col sm:flex-row gap-6">
+            <Card title="Design">
+                <div class="grid grid-cols-5 gap-4">
+                    <div class="tooltip tooltip-bottom" data-tip="Figma"><img src="../../public/figma-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                    <div class="tooltip tooltip-bottom" data-tip="Adobe Photoshop">
+                      <img src="../../public/adobe-photoshop-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                    <div class="tooltip tooltip-bottom" data-tip="Adobe Illustrator"><img src="../../public/adobe-illustrator-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                    <div class="tooltip tooltip-bottom" data-tip="Affinity Photo"><img src="../../public/affinity-photo-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                    <div class="tooltip tooltip-bottom" data-tip="Affinity Designer"><img src="../../public/affinity-designer-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                </div>
+            </Card>
+            <Card title="Develop">
+                <div class="grid grid-cols-6 gap-4">
+                <div class="tooltip tooltip-bottom" data-tip="HTML"><img src="../../public/html-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="CSS"><img src="../../public/css-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="JavaScript"><img src="../../public/javascript-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="React"><img src="../../public/react-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="TailwindCSS"><img src="../../public/tailwind-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="Astro"><img src="../../public/astro-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                </div>
+            </Card>
+        </div>
+    </section>
 </Layout>

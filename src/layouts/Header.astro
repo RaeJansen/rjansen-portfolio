@@ -1,0 +1,94 @@
+<div class="drawer drawer-end">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <!-- Navbar -->
+    <div class="navbar bg-base-200 w-full">
+      <div class="mx-2 flex-1 px-2 text-2xl font-bold uppercase"><a href="./">
+        <h1>Rae Jansen</h1>
+      </a></div>
+      <div class="flex-none lg:hidden">
+        <label for="my-drawer-2" aria-label="open sidebar" class="btn btn-square btn-ghost">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="inline-block h-6 w-6 stroke-current"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </label>
+      </div>
+
+      <div class="hidden flex-none lg:block">
+        <ul class="menu menu-horizontal uppercase">
+          <!-- Dropdown -->
+          <li class="z-10 rounded-none">
+          <details>
+            <summary class="text-xl font-bold">Portfolio</summary>
+            <ul class="shadow-none bg-base-200 border border-3 border-base-300 p-0">
+              <li><a href="./projects" class="text-xl font-bold px-5 py-3">Web Projects</a></li>
+              <li><a href="./photography" class="text-xl font-bold px-5 py-3">Photography</a></li>
+              <li><a href="./illustrations" class="text-xl font-bold px-5 py-3">Illustration</a></li>
+            </ul>
+          </details>
+        </li>
+        <!-- Other Nav -->
+          <li><a href="./about" class="text-xl font-bold">About</a></li>
+          <li><a href="./contact" class="text-xl font-bold">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="drawer-side">
+    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+    <div class="bg-base-200 min-h-full w-80 p-4 flex flex-col">
+      <!-- Close button -->
+      <div class="flex justify-end mb-4">
+  <label
+    for="my-drawer-2"
+    class="btn btn-sm btn-ghost flex items-center gap-2"
+    aria-label="close sidebar"
+  >
+    <span>Close</span>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 stroke-current"
+    >
+      <path
+        d="m16 16-4-4m0 0L8 8m4 4 4-4m-4 4-4 4"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </label>
+</div>
+
+      <ul class="menu flex-1 text-base-content uppercase">
+        <!-- Accordion -->
+        <li>
+          <details>
+            <summary class="text-xl font-bold">Portfolio</summary>
+            <ul>
+              <li><a href="./projects" class="text-xl font-bold">Web Projects</a></li>
+              <li><a href="./photography" class="text-xl font-bold">Photography</a></li>
+              <li><a href="./illustration" class="text-xl font-bold">Illustration</a></li>
+            </ul>
+          </details>
+        </li>
+        <!-- Normal Items -->
+        <li><a href="/pages/about" class="text-xl font-bold">About</a></li>
+        <li><a href="/pages/contact" class="text-xl font-bold">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

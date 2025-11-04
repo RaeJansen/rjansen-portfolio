@@ -1,28 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout pageTitle="About">
-	<Welcome>
-        <div class="container mx-auto lg:max-width-3xl sm:max-width-sm m-3">
-            <section class="mb-5">
-                <h2 class="text-3xl font-bold">Hello World! I'm Rae Jansen.</h2>
-                <p class="my-5">I’m a creative and passionate UX/UI designer based in Edmonton, Alberta. I firmly believe that the most exceptional designs emerge from creative collaboration. I don't just execute; I partner with clients to identify innovative solutions together. Please feel free to send me a message—I’m always happy to serve as a soundboard to bounce ideas off of.</p>
-                <p>I remember a time when the internet felt like an adventure around every corner. I am dedicated to bringing some of that wonder back through my designs. When crafting any experience, I often challenge myself by asking, "What can I implement here that will bring some magic to the user experience?" This philosophy ensures my work is not just functional, but genuinely memorable.</p>
-            </section>
-            <section>
-                <h3 class="text-2xl font-bold">Beyond the Screen</h3>
-                    <p class="my-5">
-                        I love to integrate photography services for my web design clients. This is my preferred method for collecting unique, authentic assets for the website and understanding a business’s culture and values firsthand. It ensures the final product is a perfect visual match for the brand.
-                        When I step away from design, I dedicate time to my other creative pursuits. Illustration has been a favorite hobby for over 20 years, bringing a disciplined eye for visual detail and composition to all my professional work. I also love to travel; I find that my best creative work is often directly inspired by the new perspectives I gain from experiencing a different city or culture.
-                    </p>
-                    <p class="my-5">
-                        I am a committed lifelong learner. Over the last five years, I have averaged 53 books read annually. I explore a broad spectrum of ideas, from self-improvement and classic novels to philosophy—if the idea is interesting, I want to read about it. This constant intake of knowledge fuels my curiosity and ensures my design thinking is always evolving.
-                        TLDR, I'm a UX/UI Designer dedicated to blending intuition and functionality with a sense of digital wonder. My diverse background—from photography and illustration to my love for reading—fuels a highly collaborative approach aimed at delivering truly memorable and effective user experiences. If you're looking for a partner to transform a concept into a truly magical digital reality, I would love to connect and discuss your next project.
-                    </p>
-            </section>
-        </div>
+  <div class="flex flex-col md:flex-row items-center justify-center gap-6 p-6">
+    <div class="flex-shrink-0">
+      <img
+        class="border border-2 border-base-300 object-cover rounded-xl w-64 h-64"
+        src="../../public/about-me-photo.webp"
+        alt="Portrait of Rae Jansen"
+      />
+    </div>
 
-    </Welcome>
+    <div class="max-w-prose">
+      <section class="my-3">
+        <h2 class="font-bold text-2xl mb-2">Hello World! I'm Rae.</h2>
+        <p class="pb-2">
+          I’m a creative and passionate UX/UI designer based in Edmonton, Alberta. I firmly believe that the most exceptional designs emerge from creative collaboration. I don't just execute; I partner with clients to identify innovative solutions together. Please feel free to send me a message—I’m always happy to serve as a soundboard to bounce ideas off of.
+        </p>
+        <p class="pb-2">
+          I remember a time when the internet felt like an adventure around every corner. I am dedicated to bringing some of that wonder back through my designs. When crafting any experience, I often challenge myself by asking, "What can I implement here that will bring some magic to the user experience?" This philosophy ensures my work is not just functional, but genuinely memorable.
+        </p>
+      </section>
+
+      <section class="my-3">
+        <h3 class="text-xl font-bold mt-2 mb-1">Beyond the Screen</h3>
+        <p class="pb-2">
+          I love to integrate photography services for my web design clients. This is my preferred method for collecting unique, authentic assets for the website and understanding a business’s culture and values firsthand. It ensures the final product is a perfect visual match for the brand.
+        </p>
+        <p class="pb-2">
+          When I step away from design, I dedicate time to my other creative pursuits. Illustration has been a favorite hobby for over 20 years, bringing a disciplined eye for visual detail and composition to all my professional work. I also love to travel; I find that my best creative work is often directly inspired by the new perspectives I gain from experiencing a different city or culture.
+        </p>
+        <p class="pb-2">
+          I am a committed lifelong learner. Over the last five years, I have averaged 53 books read annually. I explore a broad spectrum of ideas, from self-improvement and classic novels to philosophy—if the idea is interesting, I want to read about it. This constant intake of knowledge fuels my curiosity and ensures my design thinking is always evolving.
+        </p>
+      </section>
+    </div>
+  </div>
 </Layout>
