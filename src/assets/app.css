@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
@@ -9,33 +10,33 @@
   default: true;
   prefersdark: false;
   color-scheme: "light";
-  --color-base-100: oklch(97% 0.001 106.424);
-  --color-base-200: oklch(93% 0.127 124.321);
-  --color-base-300: oklch(28% 0.091 267.935);
-  --color-base-content: oklch(37% 0.146 265.522);
-  --color-primary: oklch(89% 0.196 126.665);
-  --color-primary-content: oklch(28% 0.091 267.935);
-  --color-secondary: oklch(37% 0.146 265.522);
-  --color-secondary-content: oklch(96% 0.067 122.328);
-  --color-accent: oklch(37% 0.146 265.522);
-  --color-accent-content: oklch(93% 0.127 124.321);
-  --color-neutral: oklch(37% 0.146 265.522);
-  --color-neutral-content: oklch(93% 0.127 124.321);
-  --color-info: oklch(98% 0.031 120.757);
-  --color-info-content: oklch(28% 0.091 267.935);
-  --color-success: oklch(76% 0.233 130.85);
-  --color-success-content: oklch(45% 0.124 130.933);
-  --color-warning: oklch(79% 0.184 86.047);
-  --color-warning-content: oklch(42% 0.095 57.708);
-  --color-error: oklch(63% 0.237 25.331);
-  --color-error-content: oklch(25% 0.092 26.042);
-  --radius-selector: 0.25rem;
-  --radius-field: 0rem;
-  --radius-box: 0rem;
-  --size-selector: 0.28125rem;
-  --size-field: 0.28125rem;
-  --border: 3px;
-  --depth: 1;
+  --color-base-100: #f8fafc;
+  --color-base-200: #e2e8f0;
+  --color-base-300: #cbd5e1;
+  --color-base-content: #0f172a;
+  --color-primary: #2563eb;
+  --color-primary-content: #f8fafc;
+  --color-secondary: #0ea5e9;
+  --color-secondary-content: #0b1224;
+  --color-accent: #bef264;
+  --color-accent-content: #0f172a;
+  --color-neutral: #0f172a;
+  --color-neutral-content: #e2e8f0;
+  --color-info: #0ea5e9;
+  --color-info-content: #0b1224;
+  --color-success: #16a34a;
+  --color-success-content: #0b1724;
+  --color-warning: #f59e0b;
+  --color-warning-content: #0f172a;
+  --color-error: #dc2626;
+  --color-error-content: #0f172a;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0.5;
   --noise: 0;
 }
 
@@ -44,32 +45,70 @@
   default: false;
   prefersdark: false;
   color-scheme: "dark";
-  --color-base-100: oklch(28% 0.091 267.935);
-  --color-base-200: oklch(28% 0.091 267.935);
-  --color-base-300: oklch(89% 0.196 126.665);
-  --color-base-content: oklch(96% 0.067 122.328);
-  --color-primary: oklch(89% 0.196 126.665);
-  --color-primary-content: oklch(28% 0.091 267.935);
-  --color-secondary: oklch(93% 0.127 124.321);
-  --color-secondary-content: oklch(28% 0.091 267.935);
-  --color-accent: oklch(54% 0.245 262.881);
-  --color-accent-content: oklch(93% 0.127 124.321);
-  --color-neutral: oklch(28% 0.091 267.935);
-  --color-neutral-content: oklch(96% 0.067 122.328);
-  --color-info: oklch(62% 0.214 259.815);
-  --color-info-content: oklch(28% 0.091 267.935);
-  --color-success: oklch(76% 0.233 130.85);
-  --color-success-content: oklch(40% 0.101 131.063);
-  --color-warning: oklch(79% 0.184 86.047);
-  --color-warning-content: oklch(28% 0.066 53.813);
-  --color-error: oklch(63% 0.237 25.331);
-  --color-error-content: oklch(25% 0.092 26.042);
-  --radius-selector: 0rem;
-  --radius-field: 0rem;
-  --radius-box: 0rem;
+  --color-base-100: #0b1224;
+  --color-base-200: #0f1a30;
+  --color-base-300: #1c2744;
+  --color-base-content: #e2e8f0;
+  --color-primary: #60a5fa;
+  --color-primary-content: #0b1224;
+  --color-secondary: #22d3ee;
+  --color-secondary-content: #0b1224;
+  --color-accent: #bef264;
+  --color-accent-content: #0b1224;
+  --color-neutral: #e2e8f0;
+  --color-neutral-content: #0b1224;
+  --color-info: #38bdf8;
+  --color-info-content: #0b1224;
+  --color-success: #4ade80;
+  --color-success-content: #0b1224;
+  --color-warning: #fbbf24;
+  --color-warning-content: #0b1224;
+  --color-error: #f87171;
+  --color-error-content: #0b1224;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
   --size-selector: 0.25rem;
-  --size-field: 0.28125rem;
-  --border: 2px;
-  --depth: 1;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0.35;
   --noise: 0;
+}
+
+@layer base {
+  :root {
+    font-family: "Inter", "SF Pro Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--color-base-100);
+    color: var(--color-base-content);
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: inherit;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  section {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@layer components {
+  .card-clean {
+    @apply rounded-2xl bg-base-100 border border-base-200 shadow-sm;
+  }
 }

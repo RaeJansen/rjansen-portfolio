@@ -1,0 +1,27 @@
+---
+import { base } from "../utils/basePath.js";
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<Layout>
+    <section class="my-10 space-y-6">
+        <div class="space-y-2">
+            <h2 class="text-3xl font-bold">Projects</h2>
+          <p class="text-sm font-semibold uppercase tracking-[0.08em] text-base-content/60">Portfolio</p>
+          
+        </div>
+        <div class="space-y-4">
+            <!-- Focus Photography -->
+            <ProjectCard title="Focus Photography" shortTitle="Focus Photography" img={`${base}focus-mobile.png`} badgeList={["Design", "Figma"]} deliverablesList={["Design Sprint Documentation (Research, Journey Map, Storyboard)", "Low-Fidelity Membership Application Prototype", "User Testing Notes & Findings", "Complete Visual Style Guide", "Landing Page Composition & Responsive Layouts"]} link={`${base}focus-photography`}/>
+
+             <!-- Evolution -->
+              <ProjectCard title="Evolution First Aid & CPR (Ongoing)" shortTitle="Evolution" img={`${base}evolution-mobile.png`} badgeList={["Design", "Figma", "WordPress", "Photography"]} deliverablesList={["Project Discovery", "Low-Fidelity Sales Platform Website and User Dashboard", "Brand Style Guide", "Full Figma Prototype", "UX Research & Site Map", "WordPress Environment Setup"]} link={`${base}evolution`} />
+
+              <!-- DMIT Animation Redesign -->
+              <ProjectCard title="DMIT Redesign Final Project" shortTitle="DMIT Redesign" img={`${base}dmit-mobile.png`} badgeList={["Leadership", "Client Analysis", "Presentation"]} deliverablesList={["11 Page Audience & Client Analysis Report", "Visual Redesign Mockups", "Rebranded “Director Ook” Character Concept", "15-minute, Rehearsed Presentation", "Collaborative Team Contract"]} link={`${base}dmit-redesign`} />
+        </div>
+
+
+    </section>
+</Layout>

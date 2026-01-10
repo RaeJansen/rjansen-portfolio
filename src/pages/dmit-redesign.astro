@@ -1,0 +1,99 @@
+---
+import { base } from "../utils/basePath.js";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <section class="my-8 space-y-4">
+        <h2 class="text-3xl font-bold py">DMIT Animation Stream Redesign Assignment</h2>
+        <p class="text-sm font-semibold uppercase tracking-[0.08em] text-base-content/60">Case Study</p>
+        <p class="pb-3">This collaborative assignment focused on redesigning the DMIT Animation Stream webpage at NAIT to make it more engaging, informative, and relevant to potential students. Working as part of Team 456, I served as team chair, coordinating research, managing deliverables, and shaping the final visual and narrative direction. Our team analyzed existing usability problems, researched audience demographics, and presented a refreshed design concept backed by data-driven insights, achieving an A+ for our work.</p>
+
+        <!-- Mockup Window -->
+        <div class="mockup-browser border border-base-200 bg-base-100 w-full pb-5 px-5 mt-6 rounded-2xl shadow-sm">
+            <div class="mockup-browser-toolbar">
+                <div class="input bg-base-200 text-sm">https://NAIT.ca</div>
+            </div>
+            <div class="h-[40rem] overflow-y-scroll rounded-xl border border-base-200">
+                <img src={`${base}dmit-desktop.jpg`} class="object-cover rounded-xl" alt="Evolution's New Homepage">
+            </div>
+            <div class="flex justify-center mt-3">
+            </div>
+        </div>
+        
+       <div>
+        <!-- The Challenge -->
+            <section>
+                <h3 class="text-2xl font-bold py-3">The Challenge</h3>
+                <p class="pb-2">The original webpage suffered from minimal content above the fold, disorganized navigation, and an overall lack of excitement — a major issue for a creative program meant to attract aspiring animators. Visitors couldn’t easily find key details like tuition, admission requirements, or career outcomes, and the site failed to highlight NAIT’s hands-on learning approach or strong industry partnerships.</p>
+                <h4 class="font-bold py-3">Our challenge was to:</h4>
+                <ul class="list-decimal pb-3">
+                    <li class="list-item ml-5">Perform extensive client and audience research to determine what was missing from the existing website.</li>
+                    <li class="list-item ml-5">Clarify and reorganize information to match what prospective students actually search for.</li>
+                    <li class="list-item ml-5">Redesign the page visually to capture the creativity and professionalism of the animation stream.</li>
+                    <li class="list-item ml-5">Present our findings to our client (the course's instructor).</li>
+                </ul>
+            </section>
+            <!-- The Process -->
+            <div class="flex flex-col sm:flex-row">
+                <div>
+                    <section>
+                        <h3 class="text-2xl font-bold py-3">The Process</h3>
+                        <!-- Research -->
+                        <div class="flex flex-col sm:flex-row gap-5 items-center mb-3">
+                            <section>
+                                <h4 class="text-lg font-bold">Research & Analysis</h4>
+                                <p class="pb-2">We began by analyzing three distinct audiences:</p>
+                                <ul class="list-disc pb-3">
+                                    <li class="list-item ml-5"><strong>Potential Students:</strong> primarily 17–27 years old, motivated by career readiness, mentorship, and portfolio development.</li>
+                                    <li class="list-item ml-5"><strong>Web Design Cohort:</strong> peers with limited knowledge of animation but interest in its role in web interactivity (and who we would also be presenting to).</li>
+                                    <li class="list-item ml-5"><strong>The Client:</strong> an instructor and creative professional who wanted research-backed, visually strong redesign concepts</li>
+                                </ul>
+                                <p>Each audience required a different approach — clear navigation for prospective students, curiosity and inspiration for peers, and professional polish for our instructor.</p>
+                            </section>
+                        <div><img src={`${base}client-analysis-doc-excerpt.png`} alt="Excerpt from the client documentation" class="border border-base-200 rounded-xl shadow-sm object-cover w-[800px] h-auto"></div>
+                        </div>
+                        <!-- Creative Direction -->
+                        <div class="flex flex-col sm:flex-row gap-5 items-center mb-3">
+                        <div><img src={`${base}dmit-moodboard.png`} alt="Excerpt from the client documentation" class="border border-base-200 rounded-xl shadow-sm object-cover"></div>
+                        <section class="pb-5">
+                            <h4 class="text-lg font-bold">Creative Direction</h4>
+                            <p class="pb-3">Drawing from our research, we established a dark, modern design theme inspired by Gen Z design preferences. Using blue and orange as accent colors maintained NAIT’s visual identity while adding vibrancy to contrast the darker tones.</p>
+                            <p class="pb-3">We also introduced “Director Ook”, a reimagined version of NAIT’s mascot styled like an anime director — a playful, memorable character concept that could eventually serve as a chatbot guide or brand ambassador.</p>
+                            <p class="pb-3">Our chosen typeface, Open Sans, supported readability and accessibility, and all design decisions were grounded in data: modern color preferences, dark mode readability studies, and user engagement statistics</p>
+                        </section>
+                        </div>
+                        <section class="pb-5">
+                            <h4 class="text-lg font-bold">Presentation Design</h4>
+                            <p>To communicate our process effectively, we structured our final presentation around storytelling and visual logic. We showed before-and-after wireframes, explained how the redesign addressed audience pain points, and tied every visual choice to a research insight. It was imperative to prove why each change mattered for usability, engagement, and clarity.</p>
+                        </section>
+                        </div>
+                </div>
+            </div>
+            <section id="reflection" class="pb-5">
+                <h3  class="text-2xl font-bold py-3">Results</h3>
+                <p class="pb-1">Our final presentation received strong feedback from both peers and our instructor. The redesign was praised for:</p>
+                <ul class="list-disc pb-3">
+                    <li class="list-item ml-5">Clear organization and focus on accessibility.</li>
+                    <li class="list-item ml-5">Effective use of research to justify design decisions.</li>
+                    <li class="list-item ml-5">A creative yet professional tone that balanced fun visuals with academic depth.</li>
+                </ul>
+                <p>By blending UX research, visual design, and presentation strategy, we demonstrated how targeted redesigns can transform educational webpages into meaningful recruitment tools.</p>
+            </section>
+
+            <section id="reflection" class="pb-5">
+                <h3  class="text-2xl font-bold py-3">Reflection</h3>
+                <p>
+                    This project strengthened my ability to connect data-driven research with visual storytelling. Leading the team taught me how to manage collaboration, synthesize multiple perspectives, and guide a creative concept from research to polished presentation. It reminded me that effective design is about crafting experiences that resonate with people, meet real needs, and inspire curiosity.
+                </p>
+            </section>
+                    
+<div class="flex justify-self-center mb-5"><a href={`${base}focus-photography`}><button class="btn btn-primary text-lg font-bold">See Next Project</button></a></div>
+
+    </section>
+</Layout>
+
+
+
+
+

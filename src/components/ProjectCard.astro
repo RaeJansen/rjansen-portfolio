@@ -1,0 +1,41 @@
+---
+import { base } from "../utils/basePath.js";
+export interface Props {
+  title: string;
+  shortTitle: string;
+  img: string;
+  link: string;
+  badgeList?: string[];
+  deliverablesList?: string[];
+}
+
+const { title = "Project", shortTitle,  img, link, badgeList = [], deliverablesList = [] } = Astro.props;
+---
+<div class="card-clean flex flex-col md:flex-row gap-6 items-stretch mb-6 overflow-hidden">
+  <div class="md:w-2/5">
+    <img src={img} alt={title} class="object-cover w-auto h-[100%] overflow-scroll md:rounded-l-xl" />
+  </div>
+
+  <div class="flex-1 space-y-4 p-4 md:p-6">
+    <h2 class="text-xl font-semibold">{title}</h2>
+
+    <div class="flex flex-wrap gap-2 text-xs font-medium text-base-content/80">
+      {badgeList.map((badge) => (
+        <div class="badge badge-outline rounded-full border-base-200 bg-base-200/60">{badge}</div>
+      ))}
+    </div>
+
+    <h3 class="text-sm font-semibold uppercase tracking-wide text-base-content/60">Deliverables</h3>
+    <ul class="list-disc space-y-1 list-inside text-sm">
+      {deliverablesList.map((li) => (
+        <li class="list-item">{li}</li>
+      ))}
+    </ul>
+
+    <a href={link} class="w-full block">
+      <button class="btn btn-primary w-full rounded-full font-semibold text-base">
+        Go to {shortTitle} Project Page
+      </button>
+    </a>
+  </div>
+</div>

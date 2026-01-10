@@ -1,0 +1,106 @@
+---
+import { base } from "../utils/basePath.js";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <section class="my-8 space-y-4">
+        <h2 class="text-3xl font-bold">Focus Photography Club</h2>
+        <p class="text-sm font-semibold uppercase tracking-[0.08em] text-base-content/60">Case Study</p>
+        <p class="pb-3">The Focus Photography Club project was a college assignment set out to reimagine the clubs digital membership experience — creating a modern, intuitive platform that invites photographers of all levels to join, connect, and grow. The goal was to transform a confusing system across various applications into a user-friendly digital process that reflected the club’s welcoming and creative spirit.</p>
+
+        <!-- Mockup Window -->
+        <div class="mockup-browser border border-base-200 bg-base-100 w-full pb-5 px-5 mt-6 rounded-2xl shadow-sm">
+            <div class="mockup-browser-toolbar">
+                <div class="input bg-base-200 text-sm">https://focusphotography.com</div>
+            </div>
+            <div class="h-[40rem] overflow-y-scroll rounded-xl border border-base-200">
+                <img src={`${base}focus-desktop.png`} class="object-cover rounded-xl" alt="">
+            </div>
+            <div class="flex justify-center mt-3">
+            </div>
+        </div>
+        
+       <div>
+        <!-- The Challenge -->
+            <section>
+                <h3 class="text-2xl font-bold py-3">The Challenge</h3>
+                <p class="pb-2">The club’s original membership form was unclear. Information about fees, benefits, and portfolio submissions was scattered across multiple platforms the club used to host itself, discouraging potential members from applying. I wanted to simplify this process and build trust from the first click — especially for beginners who might feel intimidated by professional portfolio requirements</p>
+                <h4 class="font-bold py-3">Key questions driving the design sprint included:</h4>
+                <ul class="list-disc">
+                    <li class="list-item ml-5">How might we simplify the application process?</li>
+                    <li class="list-item ml-5">How might we make membership benefits clear and upfront?</li>
+                    <li class="list-item ml-5">How might we engage users through portfolios without alienating newcomers?</li>
+                </ul>
+            </section>
+            <!-- The Process -->
+            <div class="flex flex-col sm:flex-row">
+                <div>
+                    <section>
+                        <h3 class="text-2xl font-bold py-3">The Process</h3>
+                        <!-- Research -->
+                        <section class="">
+                            <h4 class="text-lg font-bold">Research & Definition</h4>
+                            <p class="pb-2">My team of four conducted a design sprint to map the user journey, identify pain points, and establish clear project goals. From this, we defined the long-term mission:</p>
+                            <blockquote class="italic p-5 my-2 bg-base-200"><p class="border-l border-l-4 border-l-base-300 pl-2">"Create a digital platform that simplifies the membership process and fosters a creative community."</p></blockquote>
+                            </section>
+                        </section>
+                        <!-- Ideation & Sketching -->
+                        <section class="pb-5">
+                            <h4 class="text-lg font-bold">Ideation & Sketching</h4>
+                            <p>We explored multiple interface concepts emphasizing simplicity and visual hierarchy — short forms, large call-to-action buttons, and transparent pricing. The best ideas were distilled into a storyboard that guided prototype development.</p>
+                        </section>
+                        <!-- Prototyping -->
+                        <section class="pb-5">
+                            <h4 class="text-lg font-bold">Prototyping</h4>
+                            <p class="pb-3">Using Figma, We developed a low-fidelity prototype designed for clarity and flow. The layout focused on progressive disclosure: showing key membership information early, then leading users smoothly through the short form.</p>
+                            <div class="border border-base-200 rounded-xl shadow-sm">
+                                <img src={`${base}focus-photography-wireframes.png`} alt="">
+                            </div>
+                        </section>
+                        <!-- User Tesing -->
+                        <section class="pb-5">
+                            <h4 class="text-lg font-bold">User Testing</h4>
+                            <p class="pb-2">Five participants were interviewed using a structured testing script focused on first impressions, navigation, and overall usability.</p>
+                            <ul class="list-disc pb-3">
+                                <li class="list-item ml-5"><span class="font-bold">Users Liked: </span>the concise form, large buttons, clear pricing, and approachable tone.</li class="list-item ml-5">
+                                <li class="list-item ml-5"><span class="font-bold">Users Disliked: </span>the portfolio upload step, which felt intimidating for beginners, and non-clickable elements that appeared interactive (e.g., “Member of the Month”).</li class="list-item ml-5">
+                            </ul>
+                            <p>Feedback led to simplifying language, adding tooltips to explain the darkroom benefit, and re-evaluating optional fields to better balance inclusivity and professional appeal.</p>
+                        </section>
+                        
+                </div>
+            </div>
+                <!-- Visual System -->
+                <div class="flex gap-5 flex-col sm:flex-row items-center">
+                    <div class=" h-auto w-auto"><img src={`${base}focus-style-guide.png`} alt="Focus Photography Design Guide" class="border border-base-200 rounded-xl shadow-sm object-cover"></div>
+                    <section>
+                        <h3 class="text-2xl font-bold">Visual System</h3>
+                        <p>I developed a cohesive style guide built around the concept of focus.</p>
+                        <ul class="list-disc">
+                            <li class="list-item ml-5"><span class="font-bold">Color Palette: </span>cool blues (Airforce #5185A4, Columbia #B1D7EA) paired with crisp neutrals for a professional yet creative aesthetic.</li>
+                            <li class="list-item ml-5"><span class="font-bold">Typography: </span>Bebas Neue and Sifonn for bold headers; Montserrat for approachable body text.</li>
+                            <li class="list-item ml-5"><span class="font-bold">Imagery: </span>photos treated with a blue overlay for visual unity across diverse photographic styles.</li>
+                        </ul>
+                    </section>
+                </div>
+                <!-- Results -->
+
+                    <section class="py-5">
+                        <h3 class="text-2xl font-bold pb-3">Results</h3>
+                        <p class="pb-3">The final prototype scored 16 / 18 in evaluation, praised for intuitive usability, strong hierarchy, and empathy-driven design choices. My instructor highlighted the prototype’s clarity and how effectively it addressed user concerns, recommending more detailed input exploration for future iterations.</p>
+                        <p>I then extended the work into a desktop landing page composition, refining responsive layouts and grid systems for real-world application. Feedback emphasized my strong understanding of design principles (repetition, alignment, proximity) and attention to accessibility — notes included more contrast for clarity and modifying the calendar on mobile, which I implemented to further improve my skills.</p>
+                    </section>
+
+                    <!-- Next Project -->
+
+                     <div class="flex justify-self-center mb-5"><a href={`${base}evolution`}><button class="btn btn-primary w-full text-lg font-bold">See Next Project</button></a></div>
+                    
+
+    </section>
+</Layout>
+
+
+
+
+

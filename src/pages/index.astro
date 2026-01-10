@@ -1,44 +1,86 @@
 ---
+import { base } from "../utils/basePath.js";
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/card.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
 ---
 <Layout pageTitle="Home">
-    <div class="hero bg-base-100">
-  <div class="hero-content flex-col md:flex-row">
-    <img
-      src="../../public/headshot.svg"
-      class="border object-fit max-w-100"
-    />
-    <div>
-      <h1 class="text-5xl font-bold ">Rae Jansen</h1>
-      <p class="py-6">
-       I'm a UX/UI Designer dedicated to blending intuitive user experience with a sense of digital wonder. My diverse background—from photography and illustration to my love for reading—fuels a highly collaborative approach aimed at delivering truly memorable and effective user experiences. If you're looking for a partner to transform a concept into a truly magical digital reality, I would love to connect and discuss your next project.
-      </p>
-      <button class="btn btn-primary w-full text-lg font-bold">Contact Me</button>
+  <!-- HERO -->
+  <section class="py-16">
+    <div class="flex flex-col md:flex-row gap-5">
+      <img
+        src={`${base}headshot.webp`}
+        class="w-full object-cover max-w-xs mx-auto lg:mx-0 rounded-2xl border border-base-200 shadow-md"
+        alt="Portrait of Rae Jansen"
+      />
+      <div class="space-y-6">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">Rae Jansen</h1>
+        <div class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.08em] text-base-content/60">
+          <span class="h-[1px] w-8 bg-base-300"></span>
+          <span>UX / UI Designer</span>
+        </div>
+        <p class="text-lg text-base-content/80">
+          I'm a Product Designer dedicated to blending intuitive user experience with a sense of digital wonder. My diverse background—from photography and illustration to my love for reading—fuels a highly collaborative approach aimed at delivering memorable and effective user experiences. If you're looking for a partner to transform a concept into a digital reality, let's talk.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-5">
+          <a href={`${base}projects`} class="w-full sm:w-auto">
+            <button class="btn btn-primary w-full sm:w-auto px-6 rounded-full text-base font-semibold">View Projects</button>
+          </a>
+          <a href={`${base}contact`} class="w-full sm:w-auto">
+            <button class="btn btn-ghost border border-base-200 w-full sm:w-auto px-6 rounded-full text-base font-semibold">Contact Me</button>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-    <section class="p-4">
-        <h2 class="font-bold text-2xl mb-2">My Toolbelt</h2>
-        <div class="flex flex-col sm:flex-row gap-6">
-            <Card title="Design">
+  </section>
+
+<!-- Featured Project -->
+<section class="my-12 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.08em] text-base-content/60">Featured Project</p>
+            <h2 class="text-3xl font-bold">Evolution First Aid & CPR</h2>
+          </div>
+          <a href={`${base}projects`} class="md:self-end">
+            <button class="btn btn-ghost border border-base-200 rounded-full px-5 text-sm font-semibold">See all work</button>
+          </a>
+        </div>
+        <div>
+            <!-- Evolution -->
+              <ProjectCard title="Evolution First Aid & CPR (Ongoing)" shortTitle="Evolution" img={`${base}evolution-mobile.png`} badgeList={["Design", "Figma", "WordPress", "Photography"]} deliverablesList={["Project Discovery", "Low-Fidelity Sales Platform Website and User Dashboard", "Brand Style Guide", "Full Figma Prototype", "UX Research & Site Map", "WordPress Environment Setup"]} link={`${base}evolution`} />
+        </div>
+        </section>
+
+
+
+
+
+
+<!-- ToolBelt -->
+    <section class="my-12 space-y-4">
+        <p class="text-sm font-semibold uppercase tracking-[0.08em] text-base-content/60">Capabilities</p>
+        <h2 class="font-bold text-2xl md:text-3xl">Tools I love to work with</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Card title="Designing">
                 <div class="grid grid-cols-5 gap-4">
-                    <div class="tooltip tooltip-bottom" data-tip="Figma"><img src="../../public/figma-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                    <div class="tooltip tooltip-bottom" data-tip="Figma"><img src={`${base}figma-icon.svg`} alt="Figma" class="h-14 mx-auto object-contain"></div>
                     <div class="tooltip tooltip-bottom" data-tip="Adobe Photoshop">
-                      <img src="../../public/adobe-photoshop-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
-                    <div class="tooltip tooltip-bottom" data-tip="Adobe Illustrator"><img src="../../public/adobe-illustrator-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
-                    <div class="tooltip tooltip-bottom" data-tip="Affinity Photo"><img src="../../public/affinity-photo-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
-                    <div class="tooltip tooltip-bottom" data-tip="Affinity Designer"><img src="../../public/affinity-designer-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                      <img src={`${base}adobe-photoshop-icon.svg`} alt="Adobe Photoshop" class="h-14 mx-auto object-contain"></div>
+                    <div class="tooltip tooltip-bottom" data-tip="Adobe Illustrator"><img src={`${base}adobe-illustrator-icon.svg`} alt="Adobe Illustrator" class="h-14 mx-auto object-contain"></div>
+                    <div class="tooltip tooltip-bottom" data-tip="Affinity Photo"><img src={`${base}affinity-photo-icon.svg`} alt="Affinity Photo" class="h-14 mx-auto object-contain"></div>
+                    <div class="tooltip tooltip-bottom" data-tip="Affinity Designer"><img src={`${base}affinity-designer-icon.svg`} alt="Affinity Designer" class="h-14 mx-auto object-contain"></div>
                 </div>
             </Card>
-            <Card title="Develop">
+            <Card title="Developing">
                 <div class="grid grid-cols-6 gap-4">
-                <div class="tooltip tooltip-bottom" data-tip="HTML"><img src="../../public/html-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
-                <div class="tooltip tooltip-bottom" data-tip="CSS"><img src="../../public/css-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
-                <div class="tooltip tooltip-bottom" data-tip="JavaScript"><img src="../../public/javascript-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
-                <div class="tooltip tooltip-bottom" data-tip="React"><img src="../../public/react-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
-                <div class="tooltip tooltip-bottom" data-tip="TailwindCSS"><img src="../../public/tailwind-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
-                <div class="tooltip tooltip-bottom" data-tip="Astro"><img src="../../public/astro-icon.svg" alt="" class="object-fit w-auto h-16 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="HTML"><img src={`${base}html-icon.svg`} alt="HTML" class="h-14 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="CSS"><img src={`${base}css-icon.svg`} alt="CSS" class="h-14 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="JavaScript"><img src={`${base}javascript-icon.svg`} alt="JavaScript" class="h-14 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="React"><img src={`${base}react-icon.svg`} alt="React" class="h-14 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="TailwindCSS"><img src={`${base}tailwind-icon.svg`} alt="TailwindCSS" class="h-14 mx-auto object-contain"></div>
+                <div class="tooltip tooltip-bottom" data-tip="Astro"><img src={`${base}astro-icon.svg`} alt="Astro" class="h-14 mx-auto object-contain"></div>
                 </div>
             </Card>
         </div>

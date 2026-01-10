@@ -1,0 +1,51 @@
+---
+import { base } from "../utils/basePath.js";
+export interface Props {
+  originalUrl: string;
+  improvedUrl: string;
+  originalImg: string;
+  improvedImg: string;
+  alt?: string;
+}
+
+const { originalUrl, improvedUrl, originalImg, improvedImg, alt = "Mockup image" } = Astro.props;
+const uid = Astro.uid(); // ensures unique IDs if you reuse the component
+---
+
+<div class="mockup-browser border border-base-200 bg-base-100 w-full pb-5 px-5 mt-6 rounded-2xl shadow-sm" id={`mockup-${uid}`}>
+  <div class="mockup-browser-toolbar">
+    <div id={`url-${uid}`} class="input bg-base-200 text-sm">{originalUrl}</div>
+  </div>
+
+  <div class="h-80 overflow-y-scroll rounded-xl border border-base-200">
+    <img id={`img-${uid}`} src={originalImg} class="object-cover w-full transition-all duration-300 ease-in-out rounded-xl" alt={alt} />
+  </div>
+
+  <div class="flex justify-center mt-3">
+    <button id={`btn-${uid}`} class="btn btn-primary text-base font-semibold rounded-full">See Improved Version</button>
+  </div>
+</div>
+
+<!-- ✅ This script runs in the browser -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("btn-{uid}");
+    const img = document.getElementById("img-{uid}");
+    const url = document.getElementById("url-{uid}");
+    let showingImproved = false;
+
+    btn.addEventListener("click", () => {
+      if (!showingImproved) {
+        img.src = "{improvedImg}";
+        url.textContent = "{improvedUrl}";
+        btn.textContent = "See Original Version";
+        showingImproved = true;
+      } else {
+        img.src = "{originalImg}";
+        url.textContent = "{originalUrl}";
+        btn.textContent = "See Improved Version";
+        showingImproved = false;
+      }
+    });
+  });
+</script>
